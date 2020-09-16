@@ -1,8 +1,10 @@
 config:
   info: "master banch,springcloud-study-config/config-dev.yml version=1.0"
+
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: priv.xie.study.springcloud.entities
+
 spring:
   application:
     name: cloud-payment-service
@@ -12,6 +14,12 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: white
     password: white
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
+
 eureka:
   client:
     #表示十分将自己注册进EurekaServer，默认为true
@@ -20,3 +28,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
