@@ -12,7 +12,7 @@ spring:
     # mysql驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: white0
+    username: white
     password: white
   rabbitmq:
     host: localhost
